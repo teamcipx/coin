@@ -54,8 +54,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     { name: 'হোম', path: '/' },
     { name: 'কিনুন', path: '/buy' },
     { name: 'বিক্রি করুন', path: '/sell' },
+    { name: 'যোগাযোগ', path: '/contact' }, // নতুন লাইন
     { name: 'প্রশ্ন ও উত্তর', path: '/faq' },
-  ];
+];
 
   return (
     <div className="min-h-screen text-slate-200 font-sans flex flex-col relative overflow-x-hidden">
