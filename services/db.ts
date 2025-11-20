@@ -219,3 +219,28 @@ export const subscribeToNotifications = (userId: string, callback: (notifs: AppN
 export const markNotificationRead = async (notifId: string) => {
   await updateDoc(doc(db, NOTIFICATIONS_COL, notifId), { read: true });
 };
+
+    // ... (আগের সব কোড ঠিক থাকবে, ফাইলের শেষে এগুলো যুক্ত করুন) ...
+
+// --- Coin Management (Admin) ---
+
+export const updateCoin = async (coinId: string, data: Partial<Coin>) => {
+  const ref = doc(db, 'coins', coinId);
+  await updateDoc(ref, {
+    ...data,
+    updatedAt: Date.now()
+  });
+};
+
+export const addNewCoin = async (coinData: any) => {
+  // ID তৈরি করা হচ্ছে symbol থেকে (যেমন: BTC -> btc)
+  const id = coinData.symbol.toLowerCase();
+  const ref = doc(db, 'coins', id);
+  
+  await setDoc(ref, {
+    id,
+    ...coinData,
+    createdAt: Date.now(),
+    updatedAt: Date.now()
+  });
+};
