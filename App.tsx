@@ -10,7 +10,6 @@ import Sell from './pages/Sell';
 import Admin from './pages/Admin';
 import Profile from './pages/Profile';
 import FAQ from './pages/FAQ';
-// উপরে import সেকশনে যোগ করুন
 import Contact from './pages/Contact'; 
 
 const { HashRouter: Router, Routes, Route, Navigate } = RouterDOM;
@@ -29,7 +28,6 @@ const App: React.FC = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="/" />} />
-        
 <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
