@@ -12,6 +12,7 @@ import Profile from './pages/Profile';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact'; 
 
+
 const { HashRouter: Router, Routes, Route, Navigate } = RouterDOM;
 
 const App: React.FC = () => {
