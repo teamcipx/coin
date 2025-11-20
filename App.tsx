@@ -1,4 +1,3 @@
-
 import React from 'react';
 import * as RouterDOM from 'react-router-dom';
 import { Layout } from './components/Layout';
@@ -11,6 +10,8 @@ import Admin from './pages/Admin';
 import Profile from './pages/Profile';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact'; 
+// import সেকশনে
+import About from './pages/About';
 
 
 const { HashRouter: Router, Routes, Route, Navigate } = RouterDOM;
@@ -30,6 +31,9 @@ const App: React.FC = () => {
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="/" />} />
 <Route path="/contact" element={<Contact />} />
+        
+<Route path="/about" element={<About />} />
+
         </Routes>
       </Layout>
     </Router>
